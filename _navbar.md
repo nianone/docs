@@ -1,7 +1,12 @@
 * [arch](archLinux/README.md)
+* [Java](Java/README.md)
+* 前端
+  * [HTML]()
+  * [CSS]()
+  * [JavaScript]()
 * 常用导航
 
-  * [Java](Java/README.md)
+  
   * [多页文档](zh-cn/more-pages.md)
   * [定制导航栏](zh-cn/custom-navbar.md)
   * [封面](zh-cn/cover.md)

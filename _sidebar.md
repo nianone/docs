@@ -5,4 +5,3 @@
 * [Windos](/Windos/README.md)
 * [archLinux](/archLinux/README.md)
 * [docker](/docker/README.md)
-* [微信小程序](/微信小程序/README.md)
