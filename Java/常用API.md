@@ -14,3 +14,8 @@
 
 ### String.replace()
 > 字符串替换
+
+## List 去重
+```java
+List<String> myList = list.stream().distinct().collect(Collectors.toList());
+```

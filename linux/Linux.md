@@ -21,3 +21,9 @@ systemctl list-unit-files--type=httpd		# 查看各个级别下服务的启动与
 echo LinuxProbe.com
 ```
 
+### 3. 解锁账户
+
+```
+faillock --user <username> --reset
+```
+
