@@ -1,22 +1,28 @@
 # Git 安装配置
-> git config命令的–global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。
 
-# 1.查看git配置信息
+# 1.基本设置
+
 ```bash
-git config --list
-```
-# 2.查看git用户名、密码、邮箱的配置
-```bash
-git config user.name
-git config user.password
-git config user.email
+git config --list # 查看当前git配置信息
+git config --global -l #查看全局git配置信息
+git config --global user.name #设置全局用户名，也是git提交中的名称
+git config --global user.email #设置全局邮箱
+# 去掉global则是设置当前仓库的信息
 ```
 
-# 3.修改git用户名、密码、邮箱的配置（全局配置）
+# 2.常用命令
+
+### 2.1.初始化仓库
+
 ```bash
-git config --global user.name "freedom"
+git init
 ```
 
+### 2.2.克隆仓库
+
+```bash
+git clone <url>
+```
 # git 提交规范
 ```text
 修改类型(影响范围): 标题

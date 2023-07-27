@@ -21,6 +21,7 @@ class SidebarBuilder {
         int level = 1;
         try {
             dir = new File("").getCanonicalFile();
+            // 全部
             init(dir, dir.toString(), level);
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,6 +38,7 @@ class SidebarBuilder {
                 return file.getName().matches(REG1) && file.getName().matches(REG2);
             }
         });
+        // 排序
         List<File> fileList = Arrays.asList(files);
         Collections.sort(fileList, new Comparator<File>() {
 
@@ -49,6 +51,7 @@ class SidebarBuilder {
                 return o1.getName().compareTo(o2.getName());
             }
         });
+
         // 每层文件夹 设置一个 _sidebar.md 以及 README.md
         File sidebar = new File(dir, "_sidebar.md");        
         File remdme = new File(dir, "README.md");
@@ -82,6 +85,8 @@ class SidebarBuilder {
                 }
             }
         }
+
+
         BufferedWriter bw = null;
         try {
             bw = new BufferedWriter(new OutputStreamWriter(
