@@ -10,9 +10,9 @@ import java.util.Comparator;
 import java.util.List;
 
 class SidebarBuilder {
-    public static String reg1 = "^[^_].*";
-    public static String reg2 = "^[^\\.].*";
-    public static String md_reg = ".*[\\.md]$";
+    public static String REG1 = "^[^_].*";
+    public static String REG2 = "^[^\\.].*";
+    public static String MD_REG = ".*[\\.md]$";
 
     public static void main(String[] args) {
         // 读取根目录 一级一级的生成 _sidebar.md 文件
@@ -23,7 +23,6 @@ class SidebarBuilder {
             dir = new File("").getCanonicalFile();
             init(dir, dir.toString(), level);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -35,7 +34,7 @@ class SidebarBuilder {
         File[] files = dir.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file) {
-                return file.getName().matches(reg1) && file.getName().matches(reg2);
+                return file.getName().matches(REG1) && file.getName().matches(REG2);
             }
         });
         List<File> fileList = Arrays.asList(files);
@@ -58,7 +57,6 @@ class SidebarBuilder {
             try {
                 sidebar.createNewFile();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
@@ -73,7 +71,6 @@ class SidebarBuilder {
                 bw.newLine();
                 
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             } finally {
                 if (bw != null) {
@@ -120,7 +117,7 @@ class SidebarBuilder {
                             .append("/README.md)");
                     bw.write(stringBuffer.toString());
                     bw.newLine();
-                } else if (file.getName().matches(md_reg) && !file.getName().equals("README.md")) {
+                } else if (file.getName().matches(MD_REG) && !file.getName().equals("README.md")) {
                     // 如果是 .md 文件 且不是 README.md 文件 配置为路由
                     StringBuffer stringBuffer = new StringBuffer()
                             .append(" * [")
@@ -135,7 +132,6 @@ class SidebarBuilder {
                 }
             }
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
             if (bw != null) {
