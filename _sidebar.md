@@ -1,7 +1,7 @@
 * [**书不尽意**](/README.md)
 * [Java](/Java/README.md)
 * [TODO](/TODO/README.md)
-* [Tools](/Tools/README.md)
 * [Windos](/Windos/README.md)
 * [archLinux](/archLinux/README.md)
 * [docker](/docker/README.md)
+* [tools](/tools/README.md)
