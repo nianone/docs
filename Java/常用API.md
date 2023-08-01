@@ -19,3 +19,13 @@
 ```java
 List<String> myList = list.stream().distinct().collect(Collectors.toList());
 ```
+
+## steam 流
+
+### 排序
+```java
+// 正序
+list.stream().sorted(Comparator.comparing(User::getAge)).collect(Collectors.toList());
+// 逆序
+list.stream().sorted(Comparator.comparing(User::getAge).reversed()).collect(Collectors.toList());
+```
