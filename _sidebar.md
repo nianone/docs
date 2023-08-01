@@ -4,4 +4,5 @@
 * [Windos](/Windos/README.md)
 * [archLinux](/archLinux/README.md)
 * [docker](/docker/README.md)
+* [javaStript](/javaStript/README.md)
 * [tools](/tools/README.md)
